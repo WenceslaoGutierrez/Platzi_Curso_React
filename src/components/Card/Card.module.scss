@@ -1,6 +1,66 @@
-$primary: lightblue;
+$primary: #000;
+$primaryFontColor: #FFFF;
 
-.card{
+.card {
+    margin: 0 auto;
+    padding: 1rem;
+    width: 15rem;
     background: $primary;
+    text-align: center;
+    border-radius: 0.5rem 4rem 0.5rem;
+    position: relative;
+    color: $primaryFontColor;
+  
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-image: conic-gradient(from var(--angle),#3700ff,#6dd5fa,#2980b9,#006aff,#3700ff);
+      top: 50%;
+      left: 50%;
+      translate: -50% -50%;
+      z-index: -1;
+      padding: 0.2rem;
+      border-radius: 0.5rem 4rem 0.5rem;
+      animation: spin 1.5s linear infinite;
+    }
+  
+    &::before {
+      filter: blur(1.5rem);
+      opacity: 0.5;
+    }
+    
+    .img {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 4rem;
+        object-fit:cover;
+        margin: auto;
+    }
+
+    .header{
+        font-size: 1.4rem;
+        text-transform:uppercase;
+        font-weight: 700;
+    }
+
+    .content{
+        font-size: 1rem;
+    }
 }
 
+  @property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+  }
+  
+  @keyframes spin {
+    from {
+      --angle: 0deg;
+    }
+    to {
+      --angle: 360deg;
+    }
+  }
