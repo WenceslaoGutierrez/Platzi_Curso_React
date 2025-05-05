@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import Counter from './components/Counter/Counter'
 import './App.css'
+import CounterWithCustomHook from './components/CounterWithCustomHook/CounterWithCustomHook'
 
 const ThemeContext = createContext();
 
@@ -43,9 +44,7 @@ function App() {
 
   return (
     <>
-      <ThemeProvider>
-        <ThemeButton/>
-      </ThemeProvider>
+      <CounterWithCustomHook/>
     </>
   );
 }
