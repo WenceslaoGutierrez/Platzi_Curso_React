@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import Counter from './components/Counter/Counter'
 import './App.css'
 import CounterWithCustomHook from './components/CounterWithCustomHook/CounterWithCustomHook'
+import CounterWithReactMemo from './components/CounterWithReactMemo/CounterWithReactMemo'
 
 const ThemeContext = createContext();
 
@@ -44,7 +45,7 @@ function App() {
 
   return (
     <>
-      <CounterWithCustomHook/>
+      <CounterWithReactMemo/>
     </>
   );
 }
