@@ -1,12 +1,16 @@
 import './App.css'
-import Button from './components/Button/Button';
+import CounterTypeScript from './components/CounterTypeScript/CounterTypeScript';
+
+function greet(name: string): string{
+  return `Hi there, ${name}`
+}
 
 function App() {
-  const handleClick = () => alert("CLICK!");
+  console.log(greet("Wences"));
 
   return (
     <>
-      <Button onClick={handleClick} label="Click me"/>
+      <CounterTypeScript/>
     </>
   );
 }
